@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+  <meta name="author" content="Creative Tim">
+  <title>Schedule Checker</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="./assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="./assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<style type="text/css">
+  .form-select{
+    height: 45px;
+    border-radius: 5px;
+    width: 150px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #5e72e4;
+    padding-left: 5px;
+    padding-right: 5px;
+    outline: none;
+    box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    border-color: fff;
+
+  }
+  .form-control:focus{
+    width: 250px !important;
+  }
+  .input-group{
+    border-radius: 5px !important;
+    margin-left: 15px;
+  }
+</style>
+
+<body>
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <!--
+          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input class="form-control" placeholder="Search" type="text">
+              </div>
+            </div>
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+        -->
+          <!-- Navbar links -->
+
+          <h6 class="h2 text-white d-inline-block mb-0">Welcome, Today is <span id="today_data"><span></h6>
+          <div class="col-lg-9 col-5 text-right">
+              <a href="#" class="btn btn-sm btn-neutral">Beta v.3.0</a>
+              <a href="#" class="btn btn-sm btn-neutral">Credit</a>
+            </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+             <div class="navbar-search navbar-search-light form-inline">
+            <div class="form-group mb-0">
+              <div class="input-group input-group-alternative input-group-merge">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"></span>
+                </div>
+                <input class="form-control" placeholder="Enter Group eg. G4" type="text" id="group">
+              </div>
+              <select class="form-select" id="opt">
+                  <option>
+                    Select Day
+                  </option>
+                  <option value="SUN" id="day_0">
+                    Sunday
+                  </option>
+                  <option value="MON" id="day_1">
+                    Monday
+                  </option>
+                  <option value="TUE" id="day_2">
+                    Tuesday
+                  </option>
+                  <option value="WED" id="day_3">
+                    Wednesday
+                  </option>
+                  <option value="THU" id="day_4">
+                    Thursday
+                  </option>
+                  <option value="FRI" id="day_5">
+                    Friday
+                  </option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-neutral" onclick="f1()" id="press">View Schedule
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header border-0">
+              <h3 class="mb-0">Your Schedule For Today</h3>
+            </div>
+            <!-- Light table -->
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="sort" data-sort="name">Module Name</th>
+                    <th scope="col" class="sort" data-sort="budget">Time</th>
+                    <th scope="col" class="sort" data-sort="status">Class</th>
+                    <th scope="col">Class Type</th>
+                    <th scope="col" class="sort" data-sort="completion">Lectuere</th>
+                    <th scope="col">Module Code</th>
+                  </tr>
+                </thead>
+                <tbody class="list" id="display">
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- Card footer -->
+            <div class="card-footer py-4">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-6">
+            <div class="copyright text-center  text-lg-left  text-muted">
+              Hosting By:<a href="https://shotcoder.com" class="font-weight-bold ml-1" target="_blank">ShotCoder Hosting</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+              <li class="nav-item">
+                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Designed And Developed By: CG4 Group</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Argon Scripts -->
+  <!-- Mobile Page -->
+  <div class="main-division">
+    <div>
+      <h6 class="h2 text-white d-inline-block mb-0">Welcome, Today is <span id="today_data_mobile"><span></h6>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Core -->
+  <script type="text/javascript" src="./data.js"></script>
+  <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="./assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="./assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Argon JS -->
+  <script src="./assets/js/argon.js?v=1.2.0"></script>
+</body>
+
+</html>

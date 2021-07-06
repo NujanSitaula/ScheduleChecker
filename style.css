@@ -1,0 +1,18 @@
+@media only screen and (min-width: 670px) {
+ .main-division{
+ 	display: none;
+ }
+}
+
+
+@media only screen and (max-width: 670px) {
+	body{
+		background-color: #5e72e4;
+	}
+	.main-content{
+		display: none;
+	}
+	.main-division{
+
+	}
+}
