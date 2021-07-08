@@ -88,7 +88,7 @@ function f1(){
 
 			if (outcome.length == 0)
 			{
-				outcome.push("No classes Today!");
+				outcome.push("<tr><td><i class='bi bi-emoji-laughing'></i><label class='search-schedule'>Hurrey! No Classes Today!</label></td></tr>");
 			}
 
 			document.getElementById("display").innerHTML = "";
@@ -103,7 +103,7 @@ function f1(){
 	else
 	{
 		document.getElementById("display").innerHTML = "";
-		document.getElementById("display").innerHTML = "No such group";
+		document.getElementById("display").innerHTML = "<tr><td><i class='bi bi-patch-exclamation'></i><label class='search-schedule'>No Such Group Found. Try Again!</label></td></tr>";
 	}
 
 }

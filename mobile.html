@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+</head>
+<style type="text/css">
+.form-select{
+	width: 100%;
+	height: 45px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	color: #5e72e4;
+	outline: none;
+	box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+    border-color: fff;
+}
+.btn{
+	width: 100%;
+	color: #5e72e4;
+	box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+	background-color: #fff;
+	height: 45px;
+	margin-bottom: 20px;
+
+}
+.form-control{
+	height: 45px;
+}
+.btn:hover{
+	width: 100%;
+	box-shadow: 0 4px 6px rgb(50 50 93 / 11%), 0 1px 3px rgb(0 0 0 / 8%);
+	background-color: #fff;
+	height: 45px;
+	color: black;
+}
+</style>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div>
+			<h3 style="color: white; margin-bottom: 30px;">Schedule Checker</h3>
+			<input type="text" class="form-control" name="search" id="group"> 
+			<select class="form-select" id="opt">
+                  <option>
+                    Select Day
+                  </option>
+                  <option value="SUN" id="day_0">
+                    Sunday
+                  </option>
+                  <option value="MON" id="day_1">
+                    Monday
+                  </option>
+                  <option value="TUE" id="day_2">
+                    Tuesday
+                  </option>
+                  <option value="WED" id="day_3">
+                    Wednesday
+                  </option>
+                  <option value="THU" id="day_4">
+                    Thursday
+                  </option>
+                  <option value="FRI" id="day_5">
+                    Friday
+                  </option>
+                </select>
+                <button type="button" class="btn btn-primary" onclick="f1()" id="press">View Schedule
+            </button>
+			</div>
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+						</thead>
+						<tbody id="display">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script type="text/javascript" src="./js/datamobile.js"></script>
+
+</body>
+</html>

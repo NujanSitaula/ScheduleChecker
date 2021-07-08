@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="./assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="./assets/css/argon.css?v=1.2.0" type="text/css">
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <style type="text/css">
   .form-select{
@@ -144,7 +145,11 @@
                   </tr>
                 </thead>
                 <tbody class="list" id="display">
-                  
+                  <tr>
+                    <td>
+                  <i class="bi bi-patch-exclamation"></i><label class="search-schedule">Please Search Schedule Above</label>
+                  </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -188,7 +193,7 @@
 
 
   <!-- Core -->
-  <script type="text/javascript" src="./data.js"></script>
+  <script type="text/javascript" src="./js/data.js"></script>
   <script src="./assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="./assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/vendor/js-cookie/js.cookie.js"></script>
@@ -196,6 +201,13 @@
   <script src="./assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
   <!-- Argon JS -->
   <script src="./assets/js/argon.js?v=1.2.0"></script>
+  <script type="text/javascript">
+  <!--
+  if (screen.width <= 670) {
+    window.location = "./mobile.html";
+  }
+  //-->
+</script>
 </body>
 
 </html>
